@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Product Page with Add to Cart</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 20px;
+      border-bottom: 2px solid #fff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #005792;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .product-card h2 {
+      font-size: 1.1em;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .product-card p {
+      font-size: 0.9em;
+      margin: 5px 0 10px;
+      flex-grow: 1;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #005792;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+      background-color: #005792;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 0.9em;
+    }
+
+    .add-to-cart:hover {
+      background-color: #003f5c;
+    }
+
+    @media (max-width: 900px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Product Collection</h1>
+  </header>
+  <main class="products-grid">
+    <div class="product-card">
+      <img src="https://images.pexels.com/photos/6311397/pexels-photo-6311397.jpeg?auto=compress&cs=tinysrgb&h=150" alt="Floral T-shirt" />
+      <h2>Floral T-shirt</h2>
+      <p>Soft cotton t-shirt with floral print.</p>
+      <span class="price">$19.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.pexels.com/photos/6311615/pexels-photo-6311615.jpeg?auto=compress&cs=tinysrgb&h=150" alt="Denim Jacket" />
+      <h2>Denim Jacket</h2>
+      <p>Classic denim jacket, perfect for any outfit.</p>
+      <span class="price">$49.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&h=150" alt="Sport Sneakers" />
+      <h2>Sport Sneakers</h2>
+      <p>Comfortable sneakers for running and casual wear.</p>
+      <span class="price">$59.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.pexels.com/photos/2529146/pexels-photo-2529146.jpeg?auto=compress&cs=tinysrgb&h=150" alt="Leather Backpack" />
+      <h2>Leather Backpack</h2>
+      <p>Stylish backpack made from genuine leather.</p>
+      <span class="price">$89.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&h=150" alt="Classic Watch" />
+      <h2>Classic Watch</h2>
+      <p>Elegant watch with leather strap.</p>
+      <span class="price">$129.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg?auto=compress&cs=tinysrgb&h=150" alt="Wireless Earbuds" />
+      <h2>Wireless Earbuds</h2>
+      <p>High-quality sound and noise cancellation.</p>
+      <span class="price">$79.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.pexels.com/photos/2529149/pexels-photo-2529149.jpeg?auto=compress&cs=tinysrgb&h=150" alt="Summer Hat" />
+      <h2>Summer Hat</h2>
+      <p>Perfect for sunny days at the beach.</p>
+      <span class="price">$15.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&h=150" alt="Sunglasses" />
+      <h2>Sunglasses</h2>
+      <p>Trendy sunglasses with UV protection.</p>
+      <span class="price">$25.99</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </main>
+</body>
+</html>
